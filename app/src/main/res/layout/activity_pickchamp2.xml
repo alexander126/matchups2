@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alex.matchups.pickchamp2">
+    <RelativeLayout
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/layrow1.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:showDividers="middle">
+            <ImageButton
+                android:id="@+id/aatrox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aatrox"
+                android:layout_marginStart="5dp"/>
+            <ImageButton
+                android:id="@+id/ahri2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ahri"
+                android:layout_marginStart="5dp"
+                />
+
+            <ImageButton
+                android:id="@+id/akali2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/akali"
+                android:layout_marginStart="5dp"
+
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

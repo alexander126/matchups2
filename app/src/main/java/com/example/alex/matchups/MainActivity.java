@@ -7,25 +7,57 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import static android.R.attr.text;
+import static android.R.attr.value;
 
 public class MainActivity extends AppCompatActivity {
-
-    public static ImageView image;
+    TextView champ1;
+    TextView champ2;
+    private ImageView image;
+    private ImageView image2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView image = (ImageView)findViewById(R.id.champ1);
-        image.setImageResource(getIntent().getIntExtra("myImageResource",R.drawable.mou));
-        Button btn1 = (Button)findViewById(R.id.button1);
-        btn1.setOnClickListener(new View.OnClickListener(){
+        //--INITIALISING IMAGEVIEW--//
+        image = (ImageView)findViewById(R.id.champ1);
+        image2 = (ImageView)findViewById(R.id.champ2);
+        ImageView image3 = (ImageView)findViewById(R.id.vs);
+
+        //--SETTING RESOURCES FROM ANOTHER ACTIVITY--//
+        image.setImageResource(getIntent().getIntExtra("myImageResource",R.drawable.random));
+        image2.setImageResource(getIntent().getIntExtra("myImageResource2",R.drawable.random));
+        image3.setImageResource(R.drawable.vssymbol);
+        //--SETTINGS TEXT FROM ANOTHER ACTIVITY--//
+        champ1=(TextView) findViewById(R.id.textview1);
+        champ1.setText(getIntent().getStringExtra("message"));
+        champ2=(TextView)findViewById(R.id.textview2);
+        champ2.setText(getIntent().getStringExtra("message2"));
+
+
+        //--PICK CHAMP BUTTONS--//
+        Button champselect1 = (Button)findViewById(R.id.champselect1);
+        Button champselect2 = (Button)findViewById(R.id.champselect2);
+
+        //------------------//
+        champselect1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
 
                     Intent intent = new Intent(MainActivity.this, pickchamp.class);
                     startActivity(intent);
 
+            }
+        });
+
+        champselect2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, pickchamp2.class);
+                startActivity(intent);
             }
         });
     }
