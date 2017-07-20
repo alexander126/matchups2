@@ -31,7 +31,8 @@ public class pickchamp extends MainActivity {
                 Intent act2= new Intent(pickchamp.this,MainActivity.class);
                 act2.putExtra("myImageResource", R.drawable.aatrox);
                 act2.putExtra("message", "Aatrox");
-                startActivity(act2);
+                setResult(10,act2);
+                finish();
             }
         });
         ahri1.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +41,8 @@ public class pickchamp extends MainActivity {
                 Intent act2= new Intent(pickchamp.this,MainActivity.class);
                 act2.putExtra("myImageResource", R.drawable.ahri);
                 act2.putExtra("message", "Ahri");
-                startActivity(act2);
+                setResult(10,act2);
+                finish();
             }
         });
         akali1.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +51,8 @@ public class pickchamp extends MainActivity {
                 Intent act2= new Intent(pickchamp.this,MainActivity.class);
                 act2.putExtra("myImageResource", R.drawable.akali);
                 act2.putExtra("message", "Akali");
-                startActivity(act2);
+                setResult(10,act2);
+                finish();
             }
         });
     }}

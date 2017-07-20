@@ -28,14 +28,13 @@ public class MainActivity extends AppCompatActivity {
         ImageView image3 = (ImageView)findViewById(R.id.vs);
 
         //--SETTING RESOURCES FROM ANOTHER ACTIVITY--//
-        image.setImageResource(getIntent().getIntExtra("myImageResource",R.drawable.random));
-        image2.setImageResource(getIntent().getIntExtra("myImageResource2",R.drawable.random));
+        image.setImageResource(R.drawable.random);
+        image2.setImageResource(R.drawable.random);
         image3.setImageResource(R.drawable.vssymbol);
         //--SETTINGS TEXT FROM ANOTHER ACTIVITY--//
         champ1=(TextView) findViewById(R.id.textview1);
-        champ1.setText(getIntent().getStringExtra("message"));
         champ2=(TextView)findViewById(R.id.textview2);
-        champ2.setText(getIntent().getStringExtra("message2"));
+
 
 
         //--PICK CHAMP BUTTONS--//
@@ -47,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
 
-                    Intent intent = new Intent(MainActivity.this, pickchamp.class);
-                    startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, pickchamp.class);
+                startActivityForResult(intent,100);
 
             }
         });
@@ -57,9 +56,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(MainActivity.this, pickchamp2.class);
-                startActivity(intent);
+                startActivityForResult(intent,100);
             }
         });
     }
-    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==100){
+            if(resultCode==10){
+                image.setImageResource(data.getIntExtra("myImageResource",R.drawable.random));
+                champ1.setText(data.getStringExtra("message"));
+
+            }else if(resultCode==11){
+                image2.setImageResource(data.getIntExtra("myImageResource2",R.drawable.random));
+                champ2.setText(data.getStringExtra("message2"));
+            }
+        }
+    }}
 
