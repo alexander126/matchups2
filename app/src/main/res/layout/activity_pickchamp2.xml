@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <LinearLayout
-            android:id="@+id/layrow1.2"
+            android:id="@+id/layrow1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -50,6 +50,132 @@
                 android:src="@drawable/akali"
                 android:layout_marginStart="5dp"
 
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layrow2"
+            android:layout_below="@+id/layrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:showDividers="middle">
+            <ImageButton
+                android:id="@+id/alistar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/alistar"
+                android:layout_marginStart="5dp"/>
+            <ImageButton
+                android:id="@+id/amumu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/amumu"
+                android:layout_marginStart="5dp"
+                />
+
+            <ImageButton
+                android:id="@+id/anivia2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/anivia"
+                android:layout_marginStart="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layrow3"
+            android:layout_below="@+id/layrow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:showDividers="middle">
+            <ImageButton
+                android:id="@+id/annie2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/annie"
+                android:layout_marginStart="5dp"/>
+            <ImageButton
+                android:id="@+id/ashe2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ashe"
+                android:layout_marginStart="5dp"
+                />
+
+            <ImageButton
+                android:id="@+id/aurelionsol2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aurelionsol"
+                android:layout_marginStart="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layrow4"
+            android:layout_below="@+id/layrow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:showDividers="middle">
+            <ImageButton
+                android:id="@+id/azir2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/azir"
+                android:layout_marginStart="5dp"/>
+            <ImageButton
+                android:id="@+id/bard2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bard"
+                android:layout_marginStart="5dp"
+                />
+
+            <ImageButton
+                android:id="@+id/blitz2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/blitzcrank"
+                android:layout_marginStart="5dp"
                 />
         </LinearLayout>
     </RelativeLayout>
