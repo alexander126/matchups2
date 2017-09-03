@@ -178,6 +178,48 @@
                 android:layout_marginStart="5dp"
                 />
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layrow5"
+            android:layout_below="@+id/layrow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:showDividers="middle">
+            <ImageButton
+                android:id="@+id/brand2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/brand"
+                android:layout_marginStart="5dp"/>
+            <ImageButton
+                android:id="@+id/braum2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/braum"
+                android:layout_marginStart="5dp"
+                />
+
+            <ImageButton
+                android:id="@+id/cait2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/caitlyn"
+                android:layout_marginStart="5dp"
+                />
+        </LinearLayout>
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

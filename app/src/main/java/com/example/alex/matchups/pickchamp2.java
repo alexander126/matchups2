@@ -29,6 +29,9 @@ public class pickchamp2 extends AppCompatActivity {
         ImageButton azir2 = (ImageButton)findViewById(R.id.azir2);
         ImageButton bard2 = (ImageButton)findViewById(R.id.bard2);
         ImageButton blitz2 = (ImageButton)findViewById(R.id.blitz2);
+        ImageButton brand2 = (ImageButton)findViewById(R.id.brand2);
+        ImageButton braum2 = (ImageButton)findViewById(R.id.braum2);
+        ImageButton cait2 = (ImageButton)findViewById(R.id.cait2);
 
         //--ONCLICKLISTENERS--//
         aatrox2.setOnClickListener(new View.OnClickListener() {
@@ -147,6 +150,36 @@ public class pickchamp2 extends AppCompatActivity {
                 Intent champ2= new Intent(pickchamp2.this,MainActivity.class);
                 champ2.putExtra("myImageResource2", R.drawable.blitzcrank);
                 champ2.putExtra("message2", "Blitzcrank");
+                setResult(11,champ2);
+                finish();
+            }
+        });
+        brand2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent champ2= new Intent(pickchamp2.this,MainActivity.class);
+                champ2.putExtra("myImageResource2", R.drawable.brand);
+                champ2.putExtra("message2", "Brand");
+                setResult(11,champ2);
+                finish();
+            }
+        });
+        braum2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent champ2= new Intent(pickchamp2.this,MainActivity.class);
+                champ2.putExtra("myImageResource2", R.drawable.braum);
+                champ2.putExtra("message2", "Braum");
+                setResult(11,champ2);
+                finish();
+            }
+        });
+        cait2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent champ2= new Intent(pickchamp2.this,MainActivity.class);
+                champ2.putExtra("myImageResource2", R.drawable.caitlyn);
+                champ2.putExtra("message2", "Caitlyn");
                 setResult(11,champ2);
                 finish();
             }
