@@ -9,12 +9,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import static android.R.attr.text;
 import static android.R.attr.value;
 
 public class MainActivity extends AppCompatActivity {
     TextView champ1;
     TextView champ2;
+    TextView result3;
     private ImageView image;
     private ImageView image2;
     @Override
@@ -34,13 +37,17 @@ public class MainActivity extends AppCompatActivity {
         //--SETTINGS TEXT FROM ANOTHER ACTIVITY--//
         champ1=(TextView) findViewById(R.id.textview1);
         champ2=(TextView)findViewById(R.id.textview2);
+        result3=(TextView) findViewById(R.id.textview3);
 
 
 
         //--PICK CHAMP BUTTONS--//
         Button champselect1 = (Button)findViewById(R.id.champselect1);
         Button champselect2 = (Button)findViewById(R.id.champselect2);
+        Button result1 = (Button)findViewById(R.id.result1);
 
+        //-- if((champ1.getText().toString().equals("EXAMPLE") && (champ2.getText().toString().equals("EXAMPLE2"))
+        //{ put text in new textview }
         //------------------//
         champselect1.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -57,6 +64,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent(MainActivity.this, pickchamp2.class);
                 startActivityForResult(intent,100);
+            }
+        });
+        result1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if ((champ1.getText().toString().equals("Ahri")) && (champ2.getText().toString().equals("Aatrox")));
+                {
+                    result3.setText("Ahri wins");
+                }
             }
         });
     }
